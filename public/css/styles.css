@@ -1,0 +1,52 @@
+.table{
+    margin-top: 8px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.col{
+    margin-bottom: 16px;
+}
+
+.menu{
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img{
+    height: 20px;
+}
+
+.row{
+    margin: 20px;
+}
+
+.cards{
+    height: 300px;
+}
+
+.bd-example{
+    margin: 35px;
+}
+
+.card-group{
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 24px;
+}
+
+.card{
+    margin: 16px;
+}
+
+.alone{
+    margin-left: 32px; 
+    padding-right: 20px
+}
+
+
+
+  

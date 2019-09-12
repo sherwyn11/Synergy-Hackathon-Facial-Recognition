@@ -1,0 +1,119 @@
+<html>
+  <head>
+     <title>FRUpload</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <style>
+     h1{
+       color:#bf4aa8;;
+       text-align: center;
+       font-size: 50px;
+       border-radius: 2px;
+     }
+     img {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;
+    }
+
+    img:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+    
+    .button{
+        border-radius: 4px;
+        border-color:#bf4aa8; 
+        color: #bf4aa8;
+        background-color: white;
+        text-align: center;
+        font-size: 28px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+  
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+  
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+  
+      .button:hover span {
+        padding-right: 25px;
+      }
+  
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+  <main>
+    <h1>Predictions</h1>
+    <div class="container mt-5" style="text-align: center">
+      <div class="row">
+        <div class="col-12">
+            <div class="progress progress-bar progress-bar-striped progress-bar-animated mb-2" style="color: white; background-color: #bf4aa8">Loading Model</div>
+        </div>
+      </div>
+      <div class="row" style="display: inline-block">
+        <img id="uploadPreview" style="width: 256px; height: 256px;" />
+        <input id ="image-selector" class="form-control border-0" type="file" name="myPhoto" onchange="PreviewImage();" style="margin-left: 120px; padding: 25px"/>
+        <!-- <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" /> -->
+        <script type="text/javascript">
+          function PreviewImage() {
+              var oFReader = new FileReader();
+              oFReader.readAsDataURL(document.getElementById("image-selector").files[0]);
+
+              oFReader.onload = function (oFREvent) {
+                  document.getElementById("uploadPreview").src = oFREvent.target.result;
+              };
+          };
+        </script>
+      </div>
+      <button id="predict-button" onclick="preprocessImage()" class="button" style="display: block; margin: 0 auto;">Predict</button>
+      <div class="row">
+          <div class="col">
+            <h2 class="ml-3"Prediction></h2>
+            <ol id="prediction-list"></ol>
+          </div>
+        </div>
+        <h2 class="ml-3">Features</h2>
+        <p id="features"></p>
+        <!-- <div class="row">
+          <div class="col-12">
+            
+            <img id="selected-image" class="ml-3" src="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            
+            <img id="selected-image" class="ml-3" src="">
+          </div>
+        </div> -->
+    </div>
+    <!-- <canvas id="canvas" height="100px" width="100px"></canvas> -->
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2.7"> </script>
+  <!-- <script src="imagenet_classes.js"></script> -->
+  <script src="/js/predict.js"></script>
+  </body>
+</html>

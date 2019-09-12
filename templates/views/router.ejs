@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FREntry</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+   <style>
+      body{
+        background-color: #51d0de;
+        font-family: 'Merriweather', serif;
+        color: white;
+      }
+       .items {
+         overflow: hidden; /* simple clearfix */
+  
+       }
+      .items .item {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        color: white;
+        padding: 10px;
+      }
+      #my_centered_buttons {
+         display: flex;
+         justify-content: center;
+       }
+      h1{
+        color:#bf4aa8;
+        text-align: center;
+        font-size: 50px;
+        border-radius: 2px;
+      }
+      h3{
+      color:#bf4aa8;
+      border-radius: 2px;
+      }
+      .column {
+        float: left;
+        width: 20%;
+        padding: 5px;
+      }
+  
+      .button {
+        border-radius: 4px;
+        border: none;
+        color: #bf4aa8;
+        background-color: white;
+        text-align: center;
+        font-size: 28px;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+  
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+  
+      .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+  
+      .button:hover span {
+        padding-right: 25px;
+      }
+  
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Page Heading -->
+      <h1 class="my-4">Face Recognition
+        <br>
+        <small>Welcome</small>
+      </h1>
+      <!-- Project One -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="/img/fetching.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Fetching Images</h3>
+          <p>Select what you want and get back whatever images you've uploaded and stored.</p>
+          <a class="button"  onclick="button1()" href="#" style="text-decoration: none;">Go to Page</a>
+        </div>
+      </div>
+      <!-- /.row -->
+      <hr>
+      <!-- Project Two -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="/img/upload.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Upload Image</h3>
+          <p>Auto tag and upload a new image to the database.</p>
+          <a class="button" onclick="button2()" href="#" style="text-decoration: none;">Go to Page</a>
+        </div>
+      </div>
+      <!-- /.row -->
+      <hr>
+      <!-- Project Three -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="/img/Livestream.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Livestream</h3>
+          <p>Watch our model tag your facial features live.</p>
+          <a class="button" onclick="button3()" href="#" style="text-decoration: none;">Go to Page</a>
+        </div>
+      </div>
+      <!-- /.row -->
+      <hr>
+      <!-- Project Four -->
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="/img/pix2pix.png" alt="">
+          </a>
+        </div>
+        <div class="col-md-5">
+          <h3>Pix2Pix</h3>
+          <p>Watch the pix2pix model generate an image based off what you draw.</p>
+          <a class="button" onclick="button4()" href="#" style="text-decoration: none;">Go to Page</a>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+    </div>
+    <!-- /.container -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/js/check.js"></script>
+  </body>
+</html>

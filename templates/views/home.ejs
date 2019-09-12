@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FRHome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="wvalueth=device-wvalueth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Labels</title>
+    <style>
+    body{
+      font-family: 'Merriweather', serif;
+    }
+     .items {
+	     overflow: hidden; /* simple clearfix */
+
+     }
+    .items .item {
+    	float: left;
+    	width: 25%;
+      box-sizing: border-box;
+      color: #51d0de;
+      padding: 10px;
+    }
+    #my_centered_buttons {
+       display: flex;
+       justify-content: center;
+     }
+    h1{
+      color:#bf4aa8;
+      text-align: center;
+      font-size: 50px;
+      border-radius: 2px;
+    }
+    .column {
+      float: left;
+      width: 20%;
+      padding: 5px;
+    }
+
+    img {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;
+    }
+
+    img:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    canvas {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;
+    }
+
+    canvas:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    .button {
+      border-radius: 4px;
+      border-color: #bf4aa8;
+      color: #bf4aa8;
+      background-color: white;
+      text-align: center;
+      font-size: 28px;
+      padding: 10px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <div class = 'page-header'>
+      <h1>Features</h1>
+    </div>
+    <div class="items">
+      <div class="item"><input type="checkbox" name="chkboxName" value="label0"> Arched Eyebrows  <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label1"> Bags under eyes <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label2"> Bald <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label3"> Bangs <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label4"> Big Lips <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label5"> Big nose <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label6"> Black hair <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label7"> Blonde hair <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label8"> Brown hair <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label9"> Bushy Eyebrows <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label10"> Chubby <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label11"> Double Chin <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label12"> Eyeglasses <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label13"> Goatee <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label14"> Gray hair <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label15"> High Cheekbones <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label16"> Male <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label17"> Mustache <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label18"> Narrow eyes <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label19"> No beard <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label20"> Oval face <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label21"> Pale skin <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label22"> Pointy Nose<br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label23"> Receding Hairline <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label24"> Sideburns <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label25"> Straight hair <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label26"> Wavy hair <br></div>
+      <div class="item"><input type="checkbox" name="chkboxName" value="label27"> Young <br></div>
+    </div>
+
+  </form>
+  <div id="my_centered_buttons">
+    <button class="button" onclick="getValues()"><span>Submit </span></button>
+  </div>
+</body>
+<hr class="mt-2 mb-5">
+<h1>Celebrity Gallery</h1>
+<div class="container">
+  <div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img id="myImg0" class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img id="myImg1" class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img id="myImg2" class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img id="myImg3" class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr class="mt-2 mb-5">
+<h1>Gallery</h1>
+<div class="container">
+  <div class="row text-center text-lg-left">
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <canvas id="canvas0" class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <canvas id="canvas1" class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <canvas id="canvas2" class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <canvas id="canvas3" class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+<script src="/js/values.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2.7"> </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
